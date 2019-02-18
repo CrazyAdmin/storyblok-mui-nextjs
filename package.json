@@ -1,0 +1,33 @@
+{
+  "name": "next-basic-storyblok-boilerplate",
+  "version": "1.0.0",
+  "description": "Next.js Storyblok Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "NODE_ENV=production now"
+  },
+  "author": "Dominic Garms <djgarms@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@material/react-layout-grid": "^0.8.0",
+    "@material/react-typography": "^0.8.0",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "@znck/prop-types": "^0.5.4",
+    "classnames": "^2.2.6",
+    "marked": "^0.6.0",
+    "next": "^8.0.0",
+    "next-routes": "^1.4.2",
+    "node-sass": "^4.11.0",
+    "nprogress": "^0.2.0",
+    "react": "^16.6.3",
+    "react-container-dimensions": "^1.4.1",
+    "react-dom": "^16.6.3",
+    "storyblok-js-client": "^1.0.21",
+    "storyblok-react": "^0.0.6"
+  }
+}

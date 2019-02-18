@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "next-demo-material",
+  "alias": "com2.lumen.media",
+  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "env": {
+    "SASS_PATH":"./node_modules"
+  }
+}
