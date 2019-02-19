@@ -1,3 +1,5 @@
+import '../src/bootstrap';
+// --- Post bootstrap -----
 import Components from '../components/index'
 import StoryblokService from '../utils/StoryblokService'
 import Layout from '../components/Layout'

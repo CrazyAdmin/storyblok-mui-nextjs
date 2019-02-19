@@ -1,32 +1,36 @@
-import clsx from 'clsx'
 import {Link} from '../routes'
 import SbEditable from 'storyblok-react'
+import Button from './Button'
 
 const NavItem = (props) => {
   const link = props.content.link
   const property = props.content.property || []
-  const buttonClasses = clsx({
-    'nav-link': true,
-    [property.join(' ')]: true
-  })
+  const text = props.content.name
+
+  const btnProps = {
+    ...props.content,
+    text
+  }
+
+  const RawButton = () => (
+    <Button content={btnProps} />
+  )
 
   const ButtonChild = () => {
     if (link.linktype === 'story') {
       return (
         <Link route={`/${link.cached_url}`} prefetch>
-          <a className={buttonClasses}>{props.content.name}</a>
+          <RawButton/>
         </Link>
       )
     }
     return (
-      <a className={buttonClasses} href={link.cached_url}>{props.content.name}</a>
+      <RawButton/>
     )
   }
   return (
     <SbEditable content={props.content}>
-      <li className="nav-item">
-        <ButtonChild/>
-      </li>
+      <ButtonChild/>
     </SbEditable>
   )
 }

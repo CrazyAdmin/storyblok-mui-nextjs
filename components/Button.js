@@ -1,23 +1,31 @@
 import SbEditable from 'storyblok-react'
 import clsx from 'clsx'
 import {Link} from '../routes'
-import {Button, ButtonIcon} from '@rmwc/button'
-
-import '@material/button/dist/mdc.button.min.css';
-
+import Button from '@material-ui/core/Button'
+import React from 'react'
+import Icon from '@material-ui/core/Icon';
 const MtButton = (props) => {
-  const link = props.content.link
-  const property = props.content.property || []
+  const content = props.content
+  const link = content.link
+  const property = content.property || []
   const buttonClasses = clsx(property)
-
-  const RawButton = () => (<Button className={buttonClasses}
-                                   label={props.content.text}
-                                   dense={property.includes('dense')}
-                                   outlined={property.includes('outlined')}
-                                   raised={property.includes('raised')}
-                                   ripple={property.includes('ripple')}
-                                   unelevated={property.includes('unelevated')}
-                                   theme={['primary', 'onSecondary']}/>)
+  const RawButton = () => {
+    if(content.icon && content.icon.icon){
+      return (<Button className={buttonClasses}
+                      size={content.size}
+                      variant={content.variant}
+                      color={content.color}>
+        <Icon className={`fa ${content.icon.icon}`}/>&nbsp;
+        {content.text}
+      </Button>)
+    }
+    return (<Button className={buttonClasses}
+                    size={content.size}
+                    variant={content.variant}
+                    color={content.color || 'default'}>
+      {content.text}
+    </Button>)
+  }
 
   const ButtonChild = () => {
     if (link.linktype === 'story') {

@@ -33,8 +33,7 @@ const Head = (props) => (
     <meta property="og:image" content={props.ogImage || defaultOGImage}/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          crossOrigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css"/>
 

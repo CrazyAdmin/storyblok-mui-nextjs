@@ -12,6 +12,7 @@ import NavItem from './NavItem'
 import Logo from './Logo'
 import RowNav from './RowNav'
 import RowNested from './RowNested'
+import Menu from './Menu'
 
 const Components = {
   'page': Page,
@@ -27,7 +28,8 @@ const Components = {
   'nav_list': NavList,
   'nav_item': NavItem,
   'logo': Logo,
-  'row_nested': RowNested
+  'row_nested': RowNested,
+  'nav_menu': Menu
 }
 
 export default (blok) => {

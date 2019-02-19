@@ -1,20 +1,21 @@
 import SbEditable from 'storyblok-react'
 import Components from './index'
 import clsx from 'clsx'
+import Grid from '@material-ui/core/Grid'
 
 const NavList = (props) => {
-  const body = props.content && props.content.body || []
+  const content = props.content
+  const body = content && content.body || []
   const ulClassNames = clsx({
-    'navbar-nav': true,
-    [props.content.style]: true
+    [content.style]: true
   })
   return (
-    <SbEditable content={props.content}>
-      <ul className={ulClassNames}>
+    <SbEditable content={content}>
+      <Grid container direction="row" justify={content.justify} alignItems={'center'}>
         {body.map((blok) =>
           Components(blok)
         )}
-      </ul>
+      </Grid>
     </SbEditable>
   )
 }
