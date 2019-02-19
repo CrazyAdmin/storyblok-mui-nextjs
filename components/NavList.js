@@ -1,10 +1,10 @@
 import SbEditable from 'storyblok-react'
 import Components from './index'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 const NavList = (props) => {
   const body = props.content && props.content.body || []
-  const ulClassNames = classNames({
+  const ulClassNames = clsx({
     'navbar-nav': true,
     [props.content.style]: true
   })

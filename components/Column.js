@@ -1,12 +1,12 @@
 import Components from './index'
 import SbEditable from 'storyblok-react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import {Cell} from '@material/react-layout-grid'
 
 const Column = (props) => {
   // const width = props.content && props.content.width || {}
   const content = props.content
-  const colClasses = classNames(props.content.style)
+  const colClasses = clsx(props.content.style)
   return (
     <SbEditable content={props.content}>
       <Cell className={colClasses}

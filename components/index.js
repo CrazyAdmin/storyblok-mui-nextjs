@@ -11,6 +11,7 @@ import NavList from './NavList'
 import NavItem from './NavItem'
 import Logo from './Logo'
 import RowNav from './RowNav'
+import RowNested from './RowNested'
 
 const Components = {
   'page': Page,
@@ -25,7 +26,8 @@ const Components = {
   'button': Button,
   'nav_list': NavList,
   'nav_item': NavItem,
-  'logo': Logo
+  'logo': Logo,
+  'row_nested': RowNested
 }
 
 export default (blok) => {

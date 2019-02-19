@@ -1,6 +1,6 @@
 import Components from './index'
 import SbEditable from 'storyblok-react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import ContainerDimensions from 'react-container-dimensions'
 import imageService from '../utils/ImageService'
 
@@ -8,7 +8,7 @@ const Section = (props) => {
   const backgroundImage = props.content.background_image
   const backgroundImageProperty = props.content.background_image_property || []
   let property = props.content.property || []
-  const containerClasses = classNames({
+  const containerClasses = clsx({
     'container-fluid': property.includes('full'),
     'container': !property.includes('full')
   })
@@ -26,13 +26,12 @@ const Section = (props) => {
 
   const WithBackgroundImage = () => {
     const backgroundImagePosition = props.content.background_image_position || 'center'
-    const sectionClasses = classNames({
+    const sectionClasses = clsx({
       'content-section': true,
       'background-section': true,
       'bg-section__repeat': backgroundImageProperty.includes('repeat'),
-      'bg-section__contain': backgroundImageProperty.includes('contain'),
-      [props.content.style]: true
-    })
+      'bg-section__contain': backgroundImageProperty.includes('contain')
+    }, props.content.style)
     return (
       <div className="content-section-wrap">
         <ContainerDimensions>

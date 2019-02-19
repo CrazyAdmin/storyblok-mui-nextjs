@@ -1,11 +1,11 @@
-import classNames from 'classnames'
+import clsx from 'clsx'
 import {Link} from '../routes'
 import SbEditable from 'storyblok-react'
 
 const NavItem = (props) => {
   const link = props.content.link
   const property = props.content.property || []
-  const buttonClasses = classNames({
+  const buttonClasses = clsx({
     'nav-link': true,
     [property.join(' ')]: true
   })

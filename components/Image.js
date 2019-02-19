@@ -1,6 +1,6 @@
 import SbEditable from 'storyblok-react'
 import imageService from '../utils/ImageService'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import ContainerDimensions from 'react-container-dimensions'
 
 const Image = (props) => {
@@ -20,7 +20,7 @@ const Image = (props) => {
     const src = imageService(componentProps.content.source, path)
     return src
   }
-  const imgClasses = classNames(property.join(' '))
+  const imgClasses = clsx(property.join(' '))
 
   const Img = ({...props}) => <img src={getSource(props.context)} alt={componentProps.content.alt || 'image'}
                                    className={imgClasses}/>

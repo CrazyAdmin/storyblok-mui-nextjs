@@ -1,26 +1,33 @@
 import SbEditable from 'storyblok-react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import {Link} from '../routes'
+import {Button, ButtonIcon} from '@rmwc/button'
 
-const Button = (props) => {
+import '@material/button/dist/mdc.button.min.css';
+
+const MtButton = (props) => {
   const link = props.content.link
   const property = props.content.property || []
-  const buttonClasses = classNames({
-    'btn': true,
-    [property.join(' ')]: true
-  })
+  const buttonClasses = clsx(property)
+
+  const RawButton = () => (<Button className={buttonClasses}
+                                   label={props.content.text}
+                                   dense={property.includes('dense')}
+                                   outlined={property.includes('outlined')}
+                                   raised={property.includes('raised')}
+                                   ripple={property.includes('ripple')}
+                                   unelevated={property.includes('unelevated')}
+                                   theme={['primary', 'onSecondary']}/>)
 
   const ButtonChild = () => {
     if (link.linktype === 'story') {
       return (
         <Link route={`/${link.cached_url}`}>
-          <a className={buttonClasses}>{props.content.text}</a>
+          <RawButton/>
         </Link>
       )
     }
-    return (
-      <a className={buttonClasses} href={link.cached_url}>{props.content.text}</a>
-    )
+    return <RawButton/>
   }
   return (
     <SbEditable content={props.content}>
@@ -29,4 +36,4 @@ const Button = (props) => {
   )
 }
 
-export default Button
+export default MtButton
