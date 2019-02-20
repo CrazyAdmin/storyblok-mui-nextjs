@@ -1,5 +1,7 @@
 # Next.js Storyblok Boilerplate
 
+This boilerplate is a testing project to get Storyblok, NextJS, MUI up and running 
+
 ## How to get started?
 
 1. [Register](https://app.storyblok.com/#!/signup) at Storyblok for free
