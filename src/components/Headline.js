@@ -7,7 +7,7 @@ import React from 'react'
 const Headline = (props) => {
   const content = props.content
   let text = content.text
-  let typography = content.typography
+  let typography = content.typography || 'h3'
    return (
     <SbEditable content={props.content}>
       <Typography component={props.tag} variant={typography} className={content.style}>{text}</Typography>

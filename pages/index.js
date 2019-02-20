@@ -1,4 +1,4 @@
-import '../src/bootstrap';
+import '../src/bootstrap'
 // --- Post bootstrap -----
 import Components from '../src/components/index'
 import StoryblokService from '../utils/StoryblokService'
@@ -29,9 +29,11 @@ export default withRouter(
       const query = context.query
       StoryblokService.setQuery(query)
       let slug = query.slug || 'home'
+      console.log('____INDEX', context.query, slug)
       if (slug.match(/^.*\.[^\\]+$/)) {
         return {}
       }
+
       try {
         let [page, settings] = await Promise.all([
           StoryblokService.get(`cdn/stories/${slug}`),
