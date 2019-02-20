@@ -16,19 +16,6 @@
     "@material-ui/core": "next",
     "@material-ui/icons": "^3.0.2",
     "@material-ui/styles": "next",
-    "@material/elevation": "^0.44.0",
-    "@material/layout-grid": "^0.41.0",
-    "@material/list": "^0.44.0",
-    "@material/menu": "^0.44.0",
-    "@material/menu-surface": "^0.44.0",
-    "@rmwc/button": "^5.1.6",
-    "@rmwc/grid": "^5.1.6",
-    "@rmwc/list": "^5.1.6",
-    "@rmwc/menu": "^5.1.6",
-    "@rmwc/theme": "^5.1.6",
-    "@rmwc/top-app-bar": "^5.1.6",
-    "@rmwc/typography": "^5.1.6",
-    "@zeit/next-css": "^1.0.1",
     "clsx": "latest",
     "install": "^0.12.2",
     "jss": "next",
@@ -42,6 +29,7 @@
     "react-container-dimensions": "^1.4.1",
     "react-dom": "^16.6.3",
     "storyblok-js-client": "^1.0.21",
-    "storyblok-react": "^0.0.6"
+    "storyblok-react": "^0.0.6",
+    "styled-jsx": "^3.2.1"
   }
 }

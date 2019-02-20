@@ -7,5 +7,39 @@
       "src": "package.json",
       "use": "@now/next"
     }
+  ],
+  "routes": [
+    {
+      "src": "^/(favicon.ico|robots.txt)$",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "X-DNS-Prefetch-Control": "on",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "DENY",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-UA-Compatible": "IE=edge; chrome=1",
+        "X-XSS-Protection": "1; mode=block; report=https://anthony.codes/report-xss-violation"
+      },
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/_next/static/(.*)$",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://anthony.codes",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "X-DNS-Prefetch-Control": "on",
+        "X-Download-Options": "noopen",
+        "X-Frame-Options": "DENY",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "X-UA-Compatible": "IE=edge; chrome=1",
+        "X-XSS-Protection": "1; mode=block; report=https://anthony.codes/report-xss-violation"
+      },
+      "dest": "/_next/static/$1"
+    }
   ]
 }

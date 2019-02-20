@@ -1,8 +1,8 @@
 import '../src/bootstrap';
 // --- Post bootstrap -----
-import Components from '../components/index'
+import Components from '../src/components/index'
 import StoryblokService from '../utils/StoryblokService'
-import Layout from '../components/Layout'
+import Layout from '../src/components/Layout'
 import React from 'react'
 import {withRouter} from 'next/router'
 import SettingsService from '../utils/SettingsService'

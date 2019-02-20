@@ -2,7 +2,7 @@ import NextHead from 'next/head'
 import {string} from 'prop-types'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import StoryblokService from '../utils/StoryblokService'
+import StoryblokService from '../../utils/StoryblokService'
 
 Router.onRouteChangeStart = (url) => {
   NProgress.start()
@@ -19,7 +19,7 @@ const Head = (props) => (
     <meta charSet="UTF-8"/>
     <title>{props.title || ''}</title>
     <meta name="description" content={props.description || defaultDescription}/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
     <link rel="icon" sizes="192x192" href="/static/touch-icon.png"/>
     <link rel="apple-touch-icon" href="/static/touch-icon.png"/>
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882"/>

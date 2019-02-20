@@ -1,5 +1,5 @@
-import imageService from '../utils/ImageService'
-import {Link} from '../routes'
+import imageService from '../../utils/ImageService'
+import {Link} from '../../routes'
 import SbEditable from 'storyblok-react'
 
 const Logo = (props) => {

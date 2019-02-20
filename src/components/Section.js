@@ -2,7 +2,7 @@ import Components from './index'
 import SbEditable from 'storyblok-react'
 import clsx from 'clsx'
 import ContainerDimensions from 'react-container-dimensions'
-import imageService from '../utils/ImageService'
+import imageService from '../../utils/ImageService'
 
 const Section = (props) => {
   const backgroundImage = props.content.background_image

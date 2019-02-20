@@ -1,5 +1,5 @@
 import SbEditable from 'storyblok-react'
-import imageService from '../utils/ImageService'
+import imageService from '../../utils/ImageService'
 import clsx from 'clsx'
 import ContainerDimensions from 'react-container-dimensions'
 

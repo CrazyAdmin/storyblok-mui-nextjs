@@ -1,6 +1,6 @@
 import SbEditable from 'storyblok-react'
 import clsx from 'clsx'
-import {Link} from '../routes'
+import {Link} from '../../routes'
 import Button from '@material-ui/core/Button'
 import React from 'react'
 import Icon from '@material-ui/core/Icon';
