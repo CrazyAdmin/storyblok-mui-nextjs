@@ -13,9 +13,9 @@
   "author": "Dominic Garms <djgarms@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "next",
-    "@material-ui/icons": "^3.0.2",
-    "@material-ui/styles": "next",
+    "@material-ui/core": "^4.0.0-alpha.1",
+    "@material-ui/icons": "^4.0.0-alpha.1",
+    "@material-ui/styles": "^4.0.0-alpha.1",
     "clsx": "latest",
     "jss": "next",
     "marked": "^0.6.0",
@@ -27,6 +27,6 @@
     "react-container-dimensions": "^1.4.1",
     "react-dom": "^16.6.3",
     "storyblok-js-client": "^1.0.21",
-    "storyblok-react": "^0.0.6"
+    "storyblok-react": "^0.0.7"
   }
 }
