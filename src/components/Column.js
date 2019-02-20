@@ -16,7 +16,7 @@ const Column = (props) => {
             xs={content.width_mobile}
             sm={content.width_tablet}
             md={content.width_desktop}
-            lg={content.width_}
+            lg={content.width_lg}
             order={content.order}
             align={content.align}>
         {props.content.body.map((blok) =>
