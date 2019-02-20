@@ -4,11 +4,6 @@ import flush from 'styled-jsx/server'
 import PropTypes from 'prop-types'
 
 class MyDocument extends Document {
-  static async getInitialProps (ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return {...initialProps}
-  }
-
   render () {
     const {pageContext} = this.props
 
